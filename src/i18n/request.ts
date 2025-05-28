@@ -1,19 +1,24 @@
 import { getRequestConfig } from 'next-intl/server'
 import { locales, defaultLocale } from './config'
 
-export default getRequestConfig(async ({ locale }) => {
-  // 驗證 locale 是否有效
-  const validLocale = locales.includes(locale as any) ? locale : defaultLocale
+export default getRequestConfig(async({ locale }) => {
+  if (!locale || !locales.includes(locale as any)) {
+    return {
+      messages: (await import(`./messages/${defaultLocale}`)).default,
+      locale: defaultLocale,
+      timeZone: 'Asia/Taipei'
+    }
+  }
+
   try {
-    const messages = (await import(`./messages/${validLocale}`)).default
+    const messages = (await import(`./messages/${locale}`)).default
     return {
       messages,
-      locale: validLocale,
+      locale,
       timeZone: 'Asia/Taipei'
     }
   } catch (error) {
-    console.error(`Failed to load messages for locale: ${validLocale}`, error)
-    // 如果無法加載指定語言，回退到默認語言
+    console.error(`Failed to load messages for locale: ${locale}`, error)
     const defaultMessages = (await import(`./messages/${defaultLocale}`)).default
     return {
       messages: defaultMessages,
