@@ -1,14 +1,22 @@
 const home = {
     intro: 'Visual design with purpose',
     hero: {
-        greeting: "Hi, I'm Jean Wang.",
-        // description: "A frontend developer with 10+ years of experience in building web applications. I thrive on crafting exceptional user interfaces and robust frontend solutions. Currently, I'm actively seeking a new role where I can continue to contribute to impactful projects.",
-        description: "I'm a senior frontend engineer with experitise in Vue.js, React.js, Typescript, and more.",
-        cta: "Contact Me"
+        greeting: "Hi, I am Jean Wang",
+        subGreeting: "to Jean Wang's Blog",
+        role: "Frontend Developer",
+        description: "Passionate about creating beautiful and user-friendly web experiences. Turning ideas into elegant, responsive websites with modern technologies.",
+        cta: "Contact Me",
+        viewProjects: "View Projects",
+        badge: {
+            title: "Frontend Developer",
+            experience: "10 years experience."
+        }
     },
     about: {
         title: "About Me", //關於我
-        description: "I'm a frontend developer with 10+ years of experience in building web applications. I thrive on crafting exceptional user interfaces and robust frontend solutions. Currently, I'm actively seeking a new role where I can continue to contribute to impactful projects."
+        description: "I'm a frontend developer with 10+ years of experience in building web applications. I thrive on crafting exceptional user interfaces and robust frontend solutions. Currently, I'm actively seeking a new role where I can continue to contribute to impactful projects.",
+        showQRCode: "Show QR Code",
+        addWeChat: "Add WeChat",
     },
     techStack: {
         title: "Tech Stack", // 技術棧
@@ -58,6 +66,6 @@ const home = {
         },
         ],
     },
-}
+} as const;
 
 export default home;

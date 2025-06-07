@@ -2,6 +2,7 @@ import { getRequestConfig } from 'next-intl/server'
 import { locales, defaultLocale } from './config'
 
 export default getRequestConfig(async({ locale }) => {
+  console.log('locale>>>', locale);
   if (!locale || !locales.includes(locale as any)) {
     return {
       messages: (await import(`./messages/${defaultLocale}`)).default,

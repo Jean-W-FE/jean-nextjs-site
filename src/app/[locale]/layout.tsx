@@ -3,8 +3,10 @@ import { NextIntlClientProvider, hasLocale} from 'next-intl'
 import { notFound } from 'next/navigation'
 import { Inter } from 'next/font/google'
 import { routing } from '@/i18n/routing'
+import { UIProvider } from '@/providers/ui-provider';
 import { SmoothScrollProvider } from '@/providers/smooth-scroll-provider'
 import { Analytics } from "@vercel/analytics/react"
+import { ThemeProvider } from '@/providers/theme-provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -35,12 +37,21 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          <SmoothScrollProvider>
-            {children}
-            <Analytics />
-          </SmoothScrollProvider>
-        </NextIntlClientProvider>
+        <UIProvider>
+          <NextIntlClientProvider messages={messages} locale={locale}>
+            <SmoothScrollProvider>
+              {children}
+              <Analytics />
+              {/* <ThemeProvider 
+                attribute="class"
+                defaultTheme="dark"
+                enableSystem
+                disableTransitionOnChange>
+                
+              </ThemeProvider> */}
+            </SmoothScrollProvider>
+          </NextIntlClientProvider>
+        </UIProvider>
       </body>
     </html>
   )

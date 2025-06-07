@@ -1,1 +1,3 @@
-# My Next.js Internationalized Personal Site
+# Jean's NextJS WebSite
+
+

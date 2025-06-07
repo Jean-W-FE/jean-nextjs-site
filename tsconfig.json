@@ -20,18 +20,12 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@jean-utils/ui": ["../jean-utils/packages/ui/src"], // 开发模式
+      "@jean-utils/layout": ["../jean-utils/packages/layout/src"], // 开发模式
+      // "@jean-utils/ui": ["../jean-utils/packages/ui/dist"]
     }
   },
-  // "include": [
-  //   "next-env.d.ts",
-  //   ".next/types/**/*.ts",
-  //   "**/*.ts",
-  //   "**/*.tsx",
-  //   "postcss.config.ts", 
-  //   "tailwind.config.ts", 
-  //   "next.config.ts"  
-  // ],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "postcss.config.js", "tailwind.config.js", "next.config.js"],
   "exclude": [
     "node_modules"

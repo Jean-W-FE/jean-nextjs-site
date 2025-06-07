@@ -1,16 +1,35 @@
-import { useTranslations } from 'next-intl';
+import ExperienceCardList from '@/components/about/Experience';
+import TechnicalSkills from '@/components/about/TechnicalSkills';
+import ProfessionalQuality from '@/components/about/Quality';
+import ProjectList from '@/components/about/ProjectList';
+import Professional from '@/components/about/Professional';
 
+const genPageClassName = (page: string) => {
+  switch(page) {
+    case 'about':
+      return `min-h-screen relative bg-gradient-to-b from-white to-purple-50 text-gray-800`;
+    case 'experience':
+      return `min-h-screen relative bg-gradient-to-b from-white to-purple-50 text-gray-800`;
+    case 'blog':
+      return `min-h-screen relative bg-gradient-to-b from-white to-purple-50 text-gray-800`;
+    case 'contact':
+      return `min-h-screen relative bg-gradient-to-b from-white to-purple-50 text-gray-800`;
+  }
+}
 export default function AboutPage() {
-  const t = useTranslations('about');
-  return <>
-  <h1>{t('title')}</h1>
-  <p>{t('description')}</p>
-  <p>工作背景总结：</p>
-  <p>兴趣爱好：喜欢看NBA，喜欢玩台球、羽毛球，虽然有点儿小菜，热衷于写代码</p>
-  <p>
-    当前状态：正在找工作，如果有合适的机会，欢迎联系我。
-    正在开发中的项目：基于AI todo sth
-  </p>
-  
-  </>;
+  return (
+    <main className={genPageClassName('about')}>
+      {/* 专业简介 */}
+      <Professional/>
+      {/* 技术能力 */}
+      <TechnicalSkills/>
+      {/* 职业素养 */}
+      <ProfessionalQuality/>
+      {/* 工作经历 */}
+      <ExperienceCardList/>
+      {/* 项目展示 */}
+      {/* todo */}
+      {/* <ProjectList/> */}
+    </main>
+  );
 }

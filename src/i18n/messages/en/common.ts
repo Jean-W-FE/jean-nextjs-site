@@ -5,7 +5,7 @@ const common = {
     nav: {
         home: 'Home',
         about: 'About',
-        work: 'Work',
+        projects: 'Projects',
         blog: 'Blog',
         contact: 'Contact Me',
     },
@@ -20,8 +20,11 @@ const common = {
         stayConnected: 'Stay Connected', // 保持聯繫
         emailPlaceholder: 'Enter your email', // 輸入您的電子郵件
         subscribe: 'Subscribe', // 訂閱電子報
-        copyright: 'Copyright © 2025 NEOM. All rights reserved.', //版權所有 © NEOM. 保留所有權利。
+        copyright: '© 2025 - Made by Jean Wang ♡ Next.js & Tailwind CSS & vercel',
+        social: 'Social',
+        privacy: 'Privacy Policy',
+        terms: 'Terms of Service',
     },
-}
+} as const;
 
 export default common;

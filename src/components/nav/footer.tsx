@@ -1,20 +1,35 @@
-'use client';
-
-import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { socialLinks } from '@/config/site';
+import {  Footer as FooterUtils } from "@jean-utils/layout";
 
 export function Footer(): JSX.Element {
   const t = useTranslations('common');
+  const footerConfig = {
+    site: {
+      name: 'Jean',
+      description: t('footer.description')
+    },
+    navigation: {
+      quickLinks: {
+        title: t('footer.quickLinks'),
+        items: [
+          { href: '/about', title: t('nav.about') },
+          { href: '/projects', title: t('nav.projects') },
+          { href: '/contact', title: t('nav.contact') }
+        ]
+      },
+      socialLinks
+    },
+    texts: {
+      copyright: t('footer.copyright'),
+      privacy: t('footer.privacy'),
+      terms: t('footer.terms'),
+      social: t('footer.social')
+    }
+  };
   return (
-    <footer className="bg-gray-900 text-white py-4">
-      <div className="container mx-auto flex justify-between items-center">
-        <div>
-          <p className="text-sm">{t('footer.copyright')}</p>
-        </div>
-        <div>
-          <Link href="https://github.com/your-username" className="text-sm hover:underline">GitHub</Link>
-        </div>
-      </div>
-    </footer>
-  )
+      <FooterUtils {...footerConfig} />
+  );
 }
+
+export default Footer;
