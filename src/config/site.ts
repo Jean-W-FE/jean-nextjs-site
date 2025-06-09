@@ -23,16 +23,16 @@ export const navItems = [
     href: '/about',
     label: 'nav.about',
   },
-  {
-    key: 'projects',
-    href: '/projects',
-    label: 'nav.projects',
-  },
-  {
-    key: 'blog',
-    href: '/blog',
-    label: 'nav.blog',
-  },
+  // {
+  //   key: 'projects',
+  //   href: '/projects',
+  //   label: 'nav.projects',
+  // },
+  // {
+  //   key: 'blog',
+  //   href: '/blog',
+  //   label: 'nav.blog',
+  // },
   {
     key: 'contact',
     href: '/contact',

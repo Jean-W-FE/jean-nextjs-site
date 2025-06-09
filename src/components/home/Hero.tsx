@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PageTitle } from '@jean-utils/ui';
+import { PageTitle } from 'jean-utils';
 
 const Hero = () => {
   const t = useTranslations('home');

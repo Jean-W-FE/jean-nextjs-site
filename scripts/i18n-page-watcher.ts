@@ -8,7 +8,7 @@ const SUPPORTED_LOCALES = ['en', 'zh-TW', 'zh-CN'];
 
 // 需要排除的路徑模式
 const EXCLUDED_PATTERNS = [
-    /\[(landing)\]/,          // 排除 [landing] 目錄
+    /\[landing\]/,          // 排除 [landing] 目錄
     /\/blog\/\[slug\]/,     // 排除 blog slug 頁面
     /\/\[slug\]/,           // 排除一般的 slug 頁面
     /\/\[id\]/             // 排除一般的 id 頁面
@@ -134,7 +134,7 @@ const handlePageCreation = (filePath: string) => {
     // console.log('Page name:', pageName);
 
     // 檢查是否為有效的頁面名稱
-    if (!pageName || pageName.includes('[') || pageName.includes(']')) {
+    if (!pageName || pageName.includes('[') || pageName.includes(']') || pageName === '(landing)') {
         // console.log(`Skipping invalid page name: ${pageName}`);
         return;
     }

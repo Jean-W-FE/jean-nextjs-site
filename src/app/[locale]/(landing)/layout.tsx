@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useTranslations } from 'next-intl';
-import Header from '@/components/nav/header';
+import { Header } from '@/components/nav/header';
 import Footer from '@/components/nav/footer';
 
 export default function LandingLayout({

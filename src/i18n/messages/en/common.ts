@@ -5,6 +5,7 @@ const common = {
     nav: {
         home: 'Home',
         about: 'About',
+        experience: 'Experience',
         projects: 'Projects',
         blog: 'Blog',
         contact: 'Contact Me',

@@ -1,20 +1,20 @@
 {
-  "name": "my-nextjs-site",
+  "name": "jean-nextjs-site",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"next dev\" \"pnpm run i18n-watch\" \"pnpm run ui-watch\"",
-    "build": "pnpm run build-ui && next build",
+    "dev": "concurrently \"next dev\" \"pnpm run i18n-watch\"",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "i18n-watch": "tsx scripts/i18n-page-watcher.ts",
-    "ui-watch": "cd ../jean-utils/packages/ui && pnpm dev",
-    "build-ui": "cd ../jean-utils/packages/ui && pnpm build",
-    "build-layout": "cd ../jean-utils/packages/layout && pnpm build"
+    "ui-watch": "cd ../jean-utils/ && pnpm dev",
+    "build-ui": "cd ../jean-utils/ && pnpm build"
   },
   "dependencies": {
     "@studio-freight/react-lenis": "^0.0.47",
+    "@emotion/is-prop-valid": "^1.2.1",
     "@tailwindcss/typography": "0.5.16",
     "clsx": "^2.1.1",
     "contentlayer": "^0.3.4",
@@ -27,9 +27,7 @@
     "next-themes": "^0.4.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwind-merge": "^3.2.0",
-    "@jean-utils/ui": "workspace:*",
-    "@jean-utils/layout": "workspace:*"
+    "tailwind-merge": "^3.2.0"
   },
   "devDependencies": {
     "@tailwindcss/line-clamp": "0.4.4",
@@ -43,6 +41,7 @@
     "chokidar": "^4.0.3",
     "concurrently": "^9.1.2",
     "google": "link:next/font/google",
+    "jean-utils": "^0.1.0",
     "next-auth": "^4.24.11",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",

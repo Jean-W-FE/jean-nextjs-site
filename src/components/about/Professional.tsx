@@ -1,7 +1,7 @@
 'use client';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { PageTitle } from '@jean-utils/ui';
+import { PageTitle } from 'jean-utils';
 import Image from 'next/image';
 export default function Professional() {
     const t = useTranslations('about');

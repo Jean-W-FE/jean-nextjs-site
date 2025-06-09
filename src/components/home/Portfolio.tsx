@@ -10,7 +10,7 @@ const projects = [
     id: 'live-management',
     title: 'Live Management Console',
     description: 'A Vue.js and TypeScript-based live streaming admin platform',
-    image: '/images/projects/live-management.png',
+    image: '/images/projects/liveme.png',
     tags: ['Vue.js', 'TypeScript', 'Element Plus'],
     link: '/projects/live-management'
   },
@@ -18,7 +18,7 @@ const projects = [
     id: 'blog',
     title: 'My Blog',
     description: 'A personal blog built with Next.js and Tailwind CSS',
-    image: '/images/projects/blog.png',
+    image: '/images/projects/liveme.png',
     tags: ['Next.js', 'React', 'Tailwind CSS'],
     link: '/projects/blog'
   }

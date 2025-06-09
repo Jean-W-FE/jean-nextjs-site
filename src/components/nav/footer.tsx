@@ -1,6 +1,7 @@
+'use client'
 import { useTranslations } from 'next-intl';
 import { socialLinks } from '@/config/site';
-import {  Footer as FooterUtils } from "@jean-utils/layout";
+import {  Footer as FooterUtils } from "jean-utils";
 
 export function Footer(): JSX.Element {
   const t = useTranslations('common');

@@ -6,7 +6,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { useUI } from '@/hooks';
+import { SectionTitle, CardTitle, SubTitle } from 'jean-utils';
 import SvgIcon from '@/components/icons/SvgIcon';
 import { ExperienceItem, EXPERIENCE_TYPES } from '@/types';
 
@@ -56,7 +56,6 @@ const experiences: ExperienceItem[] = [
 ];
 export default function ExperienceCardList(){
   const t = useTranslations('about');
-  const { SectionTitle, CardTitle, SubTitle } = useUI();
 
   return (
     <section className="py-24 px-4">

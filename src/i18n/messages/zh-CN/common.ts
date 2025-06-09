@@ -5,6 +5,7 @@ const common = {
     nav: {
         home: '首頁',
         about: '关于',
+        experience: '工作经历',
         projects: '项目',
         blog: '博客',
         contact: '联系我',
