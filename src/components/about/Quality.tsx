@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { SectionTitle } from "jean-utils";
+import { SectionTitle } from "jean-react-utils";
 
 import Image from 'next/image';
 import { SkillSoftItem } from '@/types/about/experience';

@@ -17,11 +17,19 @@ export const navItems = [
     key: 'home',
     href: '/',
     label: 'nav.home',
+    className: {
+      pc: 'text-gray-600 hover:text-black transition-colors',
+      mobile: 'text-lg font-medium text-center text-gray-600 hover:text-purple-600 transition-colors'
+    }
   },
   {
     key: 'about',
     href: '/about',
     label: 'nav.about',
+    className: {
+      pc: 'text-gray-600 hover:text-black transition-colors',
+      mobile: 'text-lg font-medium text-center text-gray-600 hover:text-purple-600 transition-colors'
+    }
   },
   // {
   //   key: 'projects',

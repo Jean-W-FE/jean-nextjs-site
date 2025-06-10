@@ -20,7 +20,7 @@ export function Header2(): JSX.Element {
     ]
     console.log('menuItems', menuItems)
     return (
-        <header className="top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md">
+        <header className="header2 top-30 left-0 right-0 z-50 bg-white/80 backdrop-blur-md">
             <div className='container flex items-center justify-between p-4'>
                 <Link
                     href="/"

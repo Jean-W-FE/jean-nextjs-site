@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
-import { SectionTitle } from "jean-utils";
+import { SectionTitle } from "jean-react-utils";
 import { SkillCategoryItem } from '@/types/about/experience';
 
 const skills: {technical: SkillCategoryItem[]} = {

@@ -6,7 +6,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { SectionTitle, CardTitle, SubTitle } from 'jean-utils';
+import { SectionTitle, CardTitle, SubTitle } from 'jean-react-utils';
 import SvgIcon from '@/components/icons/SvgIcon';
 import { ExperienceItem, EXPERIENCE_TYPES } from '@/types';
 
