@@ -30,6 +30,7 @@
     "@tailwindcss/line-clamp": "0.4.4",
     "@tailwindcss/typography": "^0.5.10",
     "@types/chokidar": "^2.1.7",
+    "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^20.17.51",
     "@types/react": "19.1.7",
     "@types/react-dom": "19.1.6",
