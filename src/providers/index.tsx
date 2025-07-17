@@ -1,3 +1,4 @@
+'use client'
 import * as React from 'react'
 import { ThemeProvider } from 'jean-react-utils'
 import { SmoothScrollProvider } from './smooth-scroll-provider'

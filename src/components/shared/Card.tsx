@@ -25,3 +25,5 @@ export const Card = ({ children, className, size = 'md', shadow = 'lg' }: CardPr
         </div>
     )
 }
+
+export default Card
