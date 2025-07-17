@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useTranslations } from 'next-intl'
-import { Icons } from "@/components/icons"
+// import { Icons } from "@/components/icons"
 import { siteConfig } from '@/config/site';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion'
@@ -26,13 +26,13 @@ export function Header2(): JSX.Element {
                     href="/"
                     className="flex items-center justify-center gap-2 text-lg font-bold tracking-wide transition-all duration-300 ease-in-out"
                 >
-                    <Icons.rocket className="h-6 w-6 md:hidden lg:block" />
+                    {/* <Icons.rocket className="h-6 w-6 md:hidden lg:block" /> */}
                     <span className="hidden md:block">{siteConfig.name}</span>
                 </Link>
                 <nav className="hidden md:flex items-center space-x-8">
                     {
                         menuItems.map((item) => (
-                            <Link href={item.href} key={item.href} className="text-gray-600 hover:text-black transition-colors">{item.label}</Link>
+                            <Link href={item.href} key={item.href} className="hover-text-foreground hover:text-black transition-colors">{item.label}</Link>
                         ))
                     }
                      <Link
@@ -64,7 +64,7 @@ export function Header2(): JSX.Element {
                                     menuItems.map((item) => 
                                         <Link 
                                             href={item.href} 
-                                            className="block text-gray-600 hover:text-black transition-colors" 
+                                            className="block hover-text-foreground hover:text-black transition-colors" 
                                             key={item.href}
                                             onClick={() => setIsMenuOpen(false)}
                                         >

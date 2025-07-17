@@ -19,6 +19,7 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       // "jean-react-utils": ["../jean-react-utils/src"], // 开发模式

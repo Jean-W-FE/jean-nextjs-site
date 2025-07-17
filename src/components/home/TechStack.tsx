@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { CardTitle, SectionTitle } from 'jean-react-utils';
 
 type TechCategory = {
   title: string;
@@ -22,7 +23,7 @@ type TechCategories = {
 
 const technologies: TechCategories = {
   frameworks: {
-    title: '核心框架',
+    title: 'techStack.frameworks.title',
     items: [
       { name: 'Vue.js', icon: '/images/tech/vue.svg' },
       { name: 'React', icon: '/images/tech/react.svg', bgColor: '#20232a' },
@@ -31,7 +32,7 @@ const technologies: TechCategories = {
     ]
   },
   ecosystem: {
-    title: '技術生態',
+    title: 'techStack.ecosystem.title',
     items: [
       { name: 'TypeScript', icon: '/images/tech/ts.svg', bgColor: '#3179c6' },
       { name: 'Node.js', icon: '/images/tech/nodejs.svg' },
@@ -40,7 +41,7 @@ const technologies: TechCategories = {
     ]
   },
   buildTools: {
-    title: '構建工具',
+    title: 'techStack.buildTools.title',
     items: [
       { name: 'Vite', icon: '/images/tech/vite.svg', bgColor: '#101010' },
       { name: 'Webpack', icon: '/images/tech/webpack.svg', bgColor: '#2b3a43' },
@@ -49,7 +50,7 @@ const technologies: TechCategories = {
     ]
   },
   styling: {
-    title: '樣式解決方案',
+    title: 'techStack.styling.title',
     items: [
       { name: 'Tailwind', icon: '/images/tech/tailwind.svg' },
       { name: 'Sass', icon: '/images/tech/sass.svg' },
@@ -63,29 +64,13 @@ export default function TechStack() {
   const t = useTranslations('home');
 
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-sky-100 to-purple-50">
-      <div className="container px-4 md:px-6 mx-auto relative z-10 max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
-            {t('techStack.title')}
-          </h2>
-        </motion.div>
-
+    <section className="section-wrapper">
+      <div className="section-container">
+        <SectionTitle title={t('techStack.title')} />
         <div className="space-y-20">
           {Object.entries(technologies).map(([key, category]) => (
             <div key={key} className="space-y-8">
-              <motion.h3
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                className="text-2xl font-semibold text-gray-700 text-center"
-              >
-                {category.title}
-              </motion.h3>
+              <CardTitle className='text-2xl font-semibold text-secondary-foreground text-center' title={t(category.title)} />
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center max-w-4xl mx-auto">
                 {category.items.map((tech, index) => (
                   <motion.div

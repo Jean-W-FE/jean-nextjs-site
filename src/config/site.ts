@@ -1,9 +1,9 @@
 import { type NavItem, type NavItemFooter } from "@/types"
 
-export const links = {
+export const sizeLinks = {
   email: "zola.wang@gmail.com",
   github:
-    "https://github.com/Zola-W",
+    "https://github.com/Jean-W-FE",
   twitter: "https://twitter.com/pjborowiecki",
   linkedin: "https://www.linkedin.com/in/pjborowiecki",
   discord: "",
@@ -18,8 +18,8 @@ export const navItems = [
     href: '/',
     label: 'nav.home',
     className: {
-      pc: 'text-gray-600 hover:text-black transition-colors',
-      mobile: 'text-lg font-medium text-center text-gray-600 hover:text-purple-600 transition-colors'
+      pc: 'hover-text-foreground hover:text-black transition-colors',
+      mobile: 'text-lg font-medium text-center hover-text-foreground hover:text-purple-600 transition-colors'
     }
   },
   {
@@ -27,8 +27,8 @@ export const navItems = [
     href: '/about',
     label: 'nav.about',
     className: {
-      pc: 'text-gray-600 hover:text-black transition-colors',
-      mobile: 'text-lg font-medium text-center text-gray-600 hover:text-purple-600 transition-colors'
+      pc: 'hover-text-foreground hover:text-black transition-colors',
+      mobile: 'text-lg font-medium text-center hover-text-foreground/40 hover:text-purple-600 transition-colors'
     }
   },
   // {
@@ -43,16 +43,16 @@ export const navItems = [
   // },
   {
     key: 'contact',
-    href: '/contact',
+    href: `mailto:${sizeLinks.email}?subject=&body=Hi, I’d like to know more about your services.`,
     label: 'nav.contact',
     className: {
-      pc: 'px-6 py-2 bg-purple-600 text-white text-sm font-medium rounded-full hover:bg-purple-700 transition-colors shadow-lg shadow-purple-500/20',
-      mobile: 'px-6 py-3 bg-purple-600 text-white text-center text-sm font-medium rounded-full hover:bg-purple-700 transition-colors shadow-lg shadow-purple-500/20',
+      pc: 'px-6 py-2 bg-purple-600 text-white text-sm font-medium rounded-full hover:bg-purple-700 transition-colors theme-shadow-lg shadow-purple-500/20',
+      mobile: 'px-6 py-3 bg-purple-600 text-white text-center text-sm font-medium rounded-full hover:bg-purple-700 transition-colors theme-shadow-lg shadow-purple-500/20',
     }
   }
 ]
 export const socialLinks = [
-  { title: 'GitHub', href: links.github },
+  { title: 'GitHub', href: sizeLinks.github },
   // { name: 'LinkedIn', href: links.linkedin },
   // { name: 'Twitter', href: links.twitter },
 ]

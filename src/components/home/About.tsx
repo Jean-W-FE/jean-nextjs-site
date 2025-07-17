@@ -4,14 +4,15 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useState } from 'react';
-
+import { SectionTitle, SubTitle } from 'jean-react-utils';
+import { sizeLinks } from '@/config/site';
 export default function About() {
   const t = useTranslations('home');
   const [showQRCode, setShowQRCode] = useState(false);
   
   const info = {
-    github: 'https://github.com/Zola-W',
-    email: 'zola.wangz@gmail.com',
+    github: sizeLinks.github,
+    email: sizeLinks.email,
     wechat: 'Jean_W90',
     address: 'Beijing, China',
   }
@@ -43,22 +44,20 @@ export default function About() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-gradient-to-b from-sky-50 to-purple-50">
-      <div className="container px-4 md:px-6 mx-auto max-w-6xl relative z-10">
+    <section className="section-wrapper">
+      <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
-            {t('about.title')}
-          </h2>
+          <SectionTitle title={t('about.title')} />
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-gray-600 leading-relaxed"
+            className="text-xl leading-relaxed text-muted-foreground"
           >
             {t('about.description')}
           </motion.p>
@@ -71,22 +70,22 @@ export default function About() {
           className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto"
         >
           {contactItems.map((item, index) => (
+            // theme-shadow-lg 
             <motion.div
               key={item.label}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.2 * index }}
-              className="flex items-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow relative group"
+              className={`flex items-center p-6 bg-card rounded-2xl theme-shadow-lg transition-shadow`}
             >
               <div className="flex items-center justify-center w-12 h-12 bg-purple-100 text-purple-600 rounded-xl">
                 <Image src={item.icon} alt={item.label} width={24} height={24} />
               </div>
               <div className="ml-4">
-                <h3 className="text-sm font-medium text-gray-500">{item.label}</h3>
+                <SubTitle className='text-sm' title={item.label} />
                 {item.link ? (
                   <a
                     href={item.link}
-                    className="text-base font-semibold text-gray-900 hover:text-purple-600 transition-colors"
+                    className="text-base font-semibold text-gray-500 hover:text-purple-600 transition-colors"
                   >
                     {item.value}
                   </a>

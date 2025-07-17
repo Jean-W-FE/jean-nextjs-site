@@ -1,6 +1,27 @@
 import type { Account, Profile, Session, User } from "next-auth"
 import type { JWT } from "next-auth/jwt"
 
+export type IconSource = 'svgs' | 'icons' | 'images' | 'tech';
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      'Icon': {
+        name: string;
+        source?: IconSource;
+        className?: string;
+        viewBox?: string;
+        useImage?: boolean;
+        width?: number;
+        height?: number;
+        alt?: string;
+      }
+    }
+  }
+}
+
+export {};
+
 export interface NavItem {
   title: string
   href: string

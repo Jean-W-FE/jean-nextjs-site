@@ -3,8 +3,10 @@ import { NextIntlClientProvider, hasLocale} from 'next-intl'
 import { notFound } from 'next/navigation'
 import { Inter } from 'next/font/google'
 import { routing } from '@/i18n/routing'
-import { SmoothScrollProvider } from '@/providers/smooth-scroll-provider'
-import { Analytics } from "@vercel/analytics/react"
+import { Providers } from '@/providers'
+import { Icon } from '@/components/icons';
+import { CursorFollow } from '@/components/shared';
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -20,6 +22,12 @@ async function getMessages(locale: string) {
   }
 }
 
+// 在 window 對象上註冊全局組件
+// if (typeof window !== 'undefined') {
+//   // @ts-ignore
+//   window.Icon = Icon;
+// }
+
 export default async function RootLayout({
   children,
   params: { locale }
@@ -33,17 +41,17 @@ export default async function RootLayout({
   const messages = await getMessages(locale)
 
   return (
-    <html lang={locale}>
-      <body className={inter.className}>
-        
+    <html lang={locale} suppressHydrationWarning>
+      <body className={inter.className }>
           <NextIntlClientProvider messages={messages} locale={locale}>
-            <SmoothScrollProvider>
-              {children}
-              <Analytics />
-            </SmoothScrollProvider>
+            <Providers>
+                {children}
+                <CursorFollow enabled={true} size="medium" color="primary" />
+            </Providers>
           </NextIntlClientProvider>
-      
       </body>
     </html>
   )
 }
+
+

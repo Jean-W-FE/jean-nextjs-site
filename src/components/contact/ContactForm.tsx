@@ -25,7 +25,7 @@ export const ContactForm = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
       onSubmit={handleSubmit}
-      className="w-full max-w-2xl mx-auto bg-white/80 backdrop-blur-lg rounded-3xl p-8 shadow-xl"
+      className="w-full max-w-2xl mx-auto bg-card backdrop-blur-lg rounded-3xl p-8 shadow-xl"
     >
       <div className="space-y-6">
         {/* Name */}
@@ -101,7 +101,7 @@ export const ContactForm = () => {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           type="submit"
-          className="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-medium rounded-xl shadow-lg shadow-purple-500/20 hover:shadow-xl transition-shadow"
+          className="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-500 text-white font-medium rounded-xl theme-shadow-lg shadow-purple-500/20 hover:shadow-xl transition-shadow"
         >
           {t('submit')}
         </motion.button>

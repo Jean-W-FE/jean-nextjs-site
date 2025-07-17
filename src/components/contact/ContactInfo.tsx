@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import { CardTitle, SubTitle } from 'jean-react-utils';
 
 export const ContactInfo = () => {
   const t = useTranslations('contact.contact_info');
@@ -29,18 +30,13 @@ export const ContactInfo = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className="bg-white/80 backdrop-blur-lg rounded-3xl p-8 shadow-xl"
+      className="bg-card theme-shadow-lg rounded-3xl p-8 shadow-xl"
     >
-      <h3 className="text-2xl font-bold text-gray-800 mb-6">
-        {t('title')}
-      </h3>
-
-      <div className="space-y-6">
+      <CardTitle title={t('title')}/>
+      <div className="space-y-6 pt-3">
         {/* Email */}
         <div>
-          <h4 className="text-sm font-medium text-gray-600 mb-2">
-            {t('email')}
-          </h4>
+          <SubTitle className='text-sm font-medium text-muted-foreground hover:text-foreground/80' title={t('email')}/>
           <a
             href="mailto:your.email@example.com"
             className="text-purple-600 hover:text-purple-700 transition-colors"
@@ -51,17 +47,16 @@ export const ContactInfo = () => {
 
         {/* Location */}
         <div>
-          <h4 className="text-sm font-medium text-gray-600 mb-2">
-            {t('location')}
-          </h4>
-          <p className="text-gray-800">
-            Taiwan
+          <SubTitle className='text-sm font-medium text-muted-foreground hover:text-foreground/80' title={t('location')}/>
+          <p className="text-purple-600 hover:text-purple-700 transition-colors"
+          >
+            Beijing, China
           </p>
         </div>
 
         {/* Social Media */}
         <div>
-          <h4 className="text-sm font-medium text-gray-600 mb-3">
+          <h4 className="text-sm font-medium hover-text-foreground mb-3">
             {t('social')}
           </h4>
           <div className="flex gap-4">
@@ -82,7 +77,7 @@ export const ContactInfo = () => {
 
         {/* Response Time */}
         <div className="pt-4 mt-6 border-t border-purple-100">
-          <p className="text-sm text-gray-600">
+          <p className="text-sm hover-text-foreground">
             {t('response_time')}
           </p>
         </div>
@@ -112,7 +107,7 @@ const SocialIcon = ({ name }: { name: string }) => {
   };
 
   return (
-    <span className="text-gray-600 hover:text-purple-600 transition-colors">
+    <span className="hover-text-foreground hover:text-purple-600 transition-colors">
       {icons[name as keyof typeof icons]}
     </span>
   );

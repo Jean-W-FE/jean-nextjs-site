@@ -1,17 +1,19 @@
 import * as React from "react";
 import { Header } from '@/components/nav/header';
 import Footer from '@/components/nav/footer';
-
+import BackgroundDecorations from "@/components/shared/BackgroundDecorations";
 export default function LandingLayout({
   children,
 }: {
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <div className="flex min-h-screen flex-col">
+    <div className="min-h-screen bg-theme-gradient">
       <Header />
-      <main className="flex-1">{children}</main>
+       <main>{children}</main>
       <Footer />
+      {/* Background Decorations */}
+      <BackgroundDecorations variant="default" />
     </div>
   );
 }

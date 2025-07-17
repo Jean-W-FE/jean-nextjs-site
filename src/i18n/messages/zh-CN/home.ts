@@ -19,7 +19,19 @@ const home = {
       addWeChat: "添加微信",
     },
     techStack: {
-      title: "技术栈"
+      title: "技术栈",
+      frameworks: {
+        title: "框架",
+      },
+      ecosystem: {
+        title: "生态系统",
+      },
+      buildTools: {
+        title: "构建工具",
+      },
+      styling: {
+        title: "样式解决方案",
+      },
     },
     portfolio: {
       title: "作品集",

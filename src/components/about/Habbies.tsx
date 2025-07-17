@@ -73,7 +73,7 @@ export default function HabbiesSection() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.2 }}
-                className={`group p-6 rounded-2xl shadow-lg ${hobby.color} hover:shadow-xl transition-all duration-300`}
+                className={`group p-6 rounded-2xl theme-shadow-lg ${hobby.color} hover:shadow-xl transition-all duration-300`}
               >
                 <div className="relative w-full aspect-square mb-6 rounded-xl overflow-hidden">
                   <Image
@@ -95,7 +95,7 @@ export default function HabbiesSection() {
                   </div>
                 </div>
                 <h3 className="text-xl font-semibold text-center mb-3">{t(hobby.title)}</h3>
-                <p className="text-gray-600 text-center">{t(hobby.description)}</p>
+                <p className="hover-text-foreground text-center">{t(hobby.description)}</p>
               </motion.div>
             ))}
           </div>

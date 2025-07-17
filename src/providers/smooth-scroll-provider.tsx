@@ -10,7 +10,7 @@ interface SmoothScrollProviderProps {
 export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
   return (
     <ReactLenis root options={{ lerp: 0.1, duration: 1.5, syncTouch: true }}>
-      {children}
+      <div className="smooth-scroll">{ children }</div>
     </ReactLenis>
   )
 }

@@ -8,19 +8,26 @@ export function Header(): JSX.Element {
     const t = useTranslations('common');
     const menuItems = navItems.map((item) => ({
         ...item,
-        label: t(item.label),  // 暫時直接替換掉 nav. 前綴
+        label: t(item.label),
         className: {
-            pc: item.className?.pc || 'text-gray-600 hover:text-black transition-colors',
-            mobile: item.className?.mobile || 'text-lg font-medium text-center text-gray-600 hover:text-purple-600 transition-colors'
+            pc: item.className?.pc || 'text-muted-foreground hover:text-foreground transition-colors',
+            mobile: item.className?.mobile || 'text-lg font-medium text-center text-muted-foreground hover:text-primary transition-colors'
         }
     }));
 
     return (
         <HeaderUtils 
-            className="header" 
+            className="bg-background/60 border-border" 
             logo={<Logo/>} 
             menuItems={menuItems} 
             enableAnimation={true}
+            theme={{
+                activeClassName: 'text-primary',
+                mobileMenu: {
+                    button: 'hover:bg-primary/10 rounded-lg transition-colors',
+                    nav: 'bg-background/80 backdrop-blur-lg border-t border-border'
+                }
+            }}
         />
     );
 }

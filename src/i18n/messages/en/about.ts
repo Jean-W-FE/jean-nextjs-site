@@ -84,6 +84,25 @@ const about = {
                 title: 'Learning',
                 description: 'I am a quick learner and I enjoy learning new things.'
             }
+        },
+        technical: {
+            title: 'Technical Skills',
+            frontend: {
+                title: 'Frontend Development',
+                description: 'I am a frontend developer and I love using React and Next.js to develop frontend applications.'
+            },
+            backend: {
+                title: 'Backend Development',
+                description: 'I am a backend developer and I love using Node.js and Express to develop backend applications.'
+            },
+            database: {
+                title: 'Database',
+                description: 'I am a database engineer and I love using MySQL and MongoDB to develop database applications.'
+            },
+            devops: {
+                title: 'DevOps',
+                description: 'I am a devops engineer and I love using Docker and Kubernetes to develop devops applications.'
+            }
         }
     },
     experience: {

@@ -35,7 +35,8 @@ const skills: {soft: SkillSoftItem[]} = {
 export default function ProfessionalQuality() {
     const t = useTranslations('about');
     return (
-        <section className="py-24 px-4">
+      // py-24 px-4
+        <section className="section-wrapper ">
             <div className="container mx-auto max-w-6xl">
                 <SectionTitle title={t('skills.soft.title')} />
                 <div className="grid md:grid-cols-4 gap-8">
@@ -45,7 +46,7 @@ export default function ProfessionalQuality() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.2 }}
-                        className="bg-white rounded-2xl shadow-lg p-8 text-center"
+                        className="bg-white rounded-2xl theme-shadow-lg p-8 text-center"
                       >
                         <div className="w-16 h-16 mx-auto mb-6 bg-purple-100 rounded-2xl p-3">
                           <Image
@@ -59,7 +60,7 @@ export default function ProfessionalQuality() {
                         <h3 className="text-xl font-semibold mb-4 text-gray-800">
                           {t(skill.name)}
                         </h3>
-                        <p className="text-gray-600">
+                        <p className="hover-text-foreground">
                           {t(skill.description)}
                         </p>
                       </motion.div>

@@ -35,7 +35,7 @@ export default function ProjectList() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.3 }}
-                    className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                    className="bg-white rounded-2xl theme-shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                     >
                     <div className="relative h-48 group">
                         <Image
@@ -55,7 +55,7 @@ export default function ProjectList() {
                             {project.role}
                         </span>
                         </div>
-                        <p className="text-gray-600 mb-6">{project.description}</p>
+                        <p className="hover-text-foreground mb-6">{project.description}</p>
                         <div className="bg-gray-50 rounded-xl p-6 mb-6">
                         <h4 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
                             <span className="w-6 h-6 bg-purple-100 rounded-lg flex items-center justify-center mr-2">
@@ -65,7 +65,7 @@ export default function ProjectList() {
                             </span>
                             {t('projects.highlights')}
                         </h4>
-                        <ul className="list-none space-y-3 text-gray-600">
+                        <ul className="list-none space-y-3 hover-text-foreground">
                             {project.highlights.map((highlight, i) => (
                             <li key={i} className="flex items-start">
                                 <span className="w-5 h-5 bg-purple-100 rounded-full flex items-center justify-center mr-3 mt-1">

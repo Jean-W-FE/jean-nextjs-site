@@ -25,6 +25,7 @@ export function middleware(req: NextRequest) {
       ?.split(',')[0]
       .split('-')[0] || DEFAULT_LOCALE;
 
+    console.log('userLang>>>>', userLang);
     const locale = SUPPORTED_LOCALES.includes(userLang) ? userLang : DEFAULT_LOCALE;
     return NextResponse.redirect(new URL(`/${locale}${pathname}`, req.url));
   }

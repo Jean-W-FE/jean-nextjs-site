@@ -32,7 +32,7 @@ export default function Process() {
             //     {index + 1}
             //   </div>
             //   <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
-            //   <p className="text-gray-600">{step.description}</p>
+            //   <p className="hover-text-foreground">{step.description}</p>
             // </motion.div>
           ))}
         </div>

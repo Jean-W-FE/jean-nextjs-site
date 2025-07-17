@@ -6,7 +6,7 @@ import Image from 'next/image';
 export default function Professional() {
     const t = useTranslations('about');
     return (
-        <section className="py-24 px-4">
+        <section className="section-wrapper">
             <div className="container mx-auto max-w-6xl">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <motion.div 
@@ -14,7 +14,7 @@ export default function Professional() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}className="space-y-6">
                          <PageTitle title={t('title')}></PageTitle>
-                         <p className="text-xl text-gray-600 leading-relaxed">
+                         <p className="text-xl hover-text-foreground leading-relaxed">
                             {t('professional.summary')}
                         </p>
                         <div className="flex flex-wrap gap-3">

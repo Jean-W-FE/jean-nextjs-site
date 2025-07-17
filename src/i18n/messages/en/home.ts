@@ -20,6 +20,18 @@ const home = {
     },
     techStack: {
         title: "Tech Stack", // 技術棧
+        frameworks: {
+            title: "Frameworks",
+        },
+        ecosystem: {
+            title: "Ecosystem",
+        },
+        buildTools: {
+            title: "Build Tools",
+        },
+        styling: {
+            title: "Styling",
+        },
     },
     portfolio: {
         title: "Portfolio" // 作品集

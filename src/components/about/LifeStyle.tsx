@@ -31,7 +31,7 @@ export default function LifeStyleSection() {
                 className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg"
               >
                 <h3 className="text-2xl font-semibold mb-4 text-purple-600">{t(item.title)}</h3>
-                <p className="text-gray-600 leading-relaxed">{t(item.content)}</p>
+                <p className="hover-text-foreground leading-relaxed">{t(item.content)}</p>
               </motion.div>
             ))}
           </div>

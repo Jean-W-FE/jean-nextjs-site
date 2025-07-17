@@ -86,7 +86,7 @@ export default function HeroSection() {
                   bottom: 50,
                 }}
               >
-                <div className="relative w-full h-full bg-white rounded-xl shadow-lg p-2 backdrop-blur-sm bg-opacity-80">
+                <div className="relative w-full h-full bg-white rounded-xl theme-shadow-lg p-2 backdrop-blur-sm bg-opacity-80">
                   <Image
                     src={skill.icon}
                     alt={skill.name}
@@ -130,7 +130,7 @@ export default function HeroSection() {
             </motion.h1>
             
             <motion.p 
-              className="text-xl text-gray-600 leading-relaxed mb-8"
+              className="text-xl hover-text-foreground leading-relaxed mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
