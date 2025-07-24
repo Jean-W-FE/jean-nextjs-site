@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import { routing } from '@/i18n/routing'
 import { Providers } from '@/providers'
 import { Icon } from '@/components/icons';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { CursorFollow } from '@/components/shared';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -46,6 +47,7 @@ export default async function RootLayout({
           <NextIntlClientProvider messages={messages} locale={locale}>
             <Providers>
                 {children}
+                <SpeedInsights />
                 <CursorFollow enabled={true} size="medium" color="primary" />
             </Providers>
           </NextIntlClientProvider>
